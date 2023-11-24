@@ -1,0 +1,21 @@
+.header__greet {
+    background-color: #ac5d5d;
+    color: #ffffff;
+}
+.header__greet__color {
+    color: #3a167c;
+}
+.header__cube {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(30, 107, 143)
+}
+
+.header__explain {
+    width: 300px;
+    background-color: #359e2b;
+}
+.header__spans {
+    color: #ffffff;
+    background-color: #28af65;
+}
