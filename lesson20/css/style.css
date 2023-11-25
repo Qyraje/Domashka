@@ -1,0 +1,20 @@
+header {
+    height: 60px;
+    background-color: #b1e543;
+}
+
+blockquote {
+    background-color: #c1d98c;
+}
+.quote {
+    background-color: #c1d98c;
+}
+
+footer {
+    height: 300px;
+    background-color: #3c5800;
+    color: #fff;
+}
+.footer__links {
+    color: #fff;
+}
