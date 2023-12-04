@@ -45,7 +45,7 @@ body {
 
 /* ==================================================================================== */
 .hero {
-    background: url(../img/hero-1.jpg) 15% 20% / cover no-repeat;
+    background: url("../img/hero-1.jpg") 15% 20% / cover no-repeat;
     padding: 120px 0;
 }
 
