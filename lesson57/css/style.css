@@ -7,15 +7,15 @@ body {
     font-size: 75px;
     font-weight: normal;
     color: white;
-    transform: translate(40%);
+    position: absolute;
+    left: 40vw;
 }
 
 .title::before {
     content: '';
     position: absolute;
-    display: block;
     background: rgb(65, 65, 255);
-    left: -10%;
+    left: -45%;
     top: -5%;
     height: 100px;
     width: 100px;
@@ -26,9 +26,8 @@ body {
 .title::after {
     content: '';
     position: absolute;
-    display: block;
     background: rgb(253, 94, 94);
-    right: 71%;
+    right: -45%;
     top: -5%;
     height: 100px;
     width: 100px;
