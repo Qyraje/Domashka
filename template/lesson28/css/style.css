@@ -1,0 +1,29 @@
+.text1 {
+    font-family: 'Open Sans', sans-serif;;
+    font-size: 20px;
+    line-height: 30px;
+}
+.text2 {
+    font-family: serif;
+    text-decoration: line-through;
+    font-size: 20px;
+}
+.text3 {
+    font-family: serif;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.text4 {
+    font-family: serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px purple;
+    text-decoration: overline wavy;
+    word-spacing: 30px;
+}
+.text5 {
+    font-family: serif;
+    font-size: 20px;
+    text-decoration: underline double;
+    letter-spacing: 5px;
+}
