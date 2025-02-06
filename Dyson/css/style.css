@@ -1,0 +1,105 @@
+@import "reset.css";
+@import "fonts.css";
+
+
+.body { 
+    line-height: 1.4;
+    font-family: "Open Sans Regular", "Arial", sans-serif;
+    color: #000;
+    background: #fff;
+}
+
+.container {
+    max-width: 1360px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header-inner {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    align-items: flex-end;
+    background-color: #111;
+    color: #fff;
+    font-family: "namu_pro", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.header__logo {
+    max-width: 183px;
+    z-index: 11;
+}
+
+.header__logo img {
+    width: 100%;
+}
+
+.nav {
+    display: block;
+}
+
+.nav__list {
+    display: flex;
+    gap: 4vh 30px;
+}
+
+.nav__link {
+    display: block;
+    padding: 33px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.nav__link:hover {
+    color: #c5358c;
+}
+
+.burger-icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    z-index: 11;
+}
+
+.burger-icon span,
+.burger-icon span::before,
+.burger-icon span::after {
+    display: block;
+    width: 33px;
+    height: 3px;
+    border-radius: 100px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.burger-icon span {
+    position: relative;
+}
+
+.burger-icon span::before,
+.burger-icon span::after {
+    content: '';
+    position: absolute;
+}
+
+.burger-icon span::before {
+    top: 11px;
+}
+
+.burger-icon span::after {
+    bottom:11px;
+}
