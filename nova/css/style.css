@@ -1,15 +1,26 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+.body {
+    line-height: 1.3;
+    font-family: 'Open Sans', sans-serif;
+    color: #111;
+    background-color: #F5F5F5;
+}
+
 .wrapper {
-    min-height: 100vh;
+    min-height: 100%;
     width: 100%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
 }
 
 .container {
     max-width: 1355px;
     width: 100%;
-    /* ← чтобы работало на мобильных */
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -23,8 +34,18 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  max-width: 1355px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 /* Бургер-иконка */
@@ -46,30 +67,29 @@
     content: '';
     position: absolute;
     width: 24px;
-    height: 2px;
+    height: 3px;
+    border-radius: 15px;
     background-color: #fff;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .burger-icon::before {
-    top: 0;
+    top: 5px;
 }
 
 .burger-icon::after {
-    bottom: 0;
+    bottom: 4px;
 }
 
 /* Логотип */
 .logo {
-    height: 30px;
+    height: 77px;
     width: auto;
     object-fit: contain;
-    margin-right: 30px;
 }
 
 /* Навигация */
 .nav {
-    display: flex;
     align-items: center;
 }
 
@@ -82,46 +102,157 @@
 }
 
 .nav__item {
-    display: flex;
+    /* display: flex; */
     gap: 20px;
 }
 
 .nav__link {
     color: #fff;
+    font-family: 'NAMU Pro', sans-serif;
+    font-size: 20px;
     text-decoration: none;
-    font-size: 14px;
     font-weight: 500;
     line-height: 1.4;
-    transition: color 0.2s ease;
+    transition: color 0.5s ease;
     padding: 8px 12px;
     border-radius: 4px;
 }
 
 .nav__link:hover {
-    color: #ccc;
-    background-color: rgba(255, 255, 255, 0.1);
+    color: #C5358C;
 }
 
 /* Корзина */
 .shopping-cart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    background-color: #9c27b0;
-    /* фиолетовый как на макете */
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.shopping-cart img {
-    width: 20px;
-    height: 20px;
-    fill: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  color: #fff; /* ← это currentColor для SVG */
+  transition: all 0.5s ease; /* ← плавность 0.4s */
 }
 
 .shopping-cart:hover {
-    background-color: #7b1fa2;
+  color: #C5358C; /* ← розовый цвет для SVG при ховере */
+}
+
+.hero {
+  width: 100%;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+.hero__content {
+  max-width: 420px;
+}
+
+.hero__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.hero__subtitle {
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.hero__button {
+  display: inline-block;
+  background: #d8388e;
+  padding: 12px 22px;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.hero__img img {
+  max-width: 733px;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+
+
+/* Адаптив */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+  /* Уменьшаем высоту хедера */
+  .header__inner {
+    height: 76px;
+    padding: 0 70px;
+  }
+
+  /* Бургер — показываем */
+  .burger-icon {
+    display: flex;
+  }
+
+  /* Анимация бургера → × */
+  .burger-icon.burger-icon--active span {
+    opacity: 0;
+  }
+
+  .burger-icon.burger-icon--active::before {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+
+  .burger-icon.burger-icon--active::after {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
+
+  /* Логотип — уменьшаем */
+  .logo {
+    height: 60px;
+    margin: 0 374px 0 40px;
+  }
+
+  /* Навигация — скрываем */
+  .nav {
+    display: none;
+  }
+
+  /* Корзина — позиционируем вправо */
+  .shopping-cart {
+    width: 32px;
+    height: 32px;
+  }
+
+  .shopping-cart svg {
+    width: 31px;
+    height: 31px;
+  }
+}
+
+@media (max-width: 390px) {
+
+  .header__inner {
+    height: 47px;
+    padding: 0 25px;
+  }
+
+  .logo {
+    height: 39px;
+    margin: 0 164px 0 25px;
+  }
+
+  .shopping-cart svg {
+    width: 24px;
+    height: 24px;
+  }
 }
