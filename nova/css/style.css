@@ -1,41 +1,40 @@
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 .body {
-    line-height: 1.3;
-    font-family: 'Open Sans', sans-serif;
-    color: #111;
-    background-color: #F5F5F5;
+  line-height: 1.3;
+  font-family: 'Open Sans', sans-serif;
+  color: #111;
+  background-color: #F5F5F5;
 }
 
 .wrapper {
-    min-height: 100%;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
-    max-width: 1355px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1355px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
-    background-color: #000;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; */
 }
 
 .header__inner {
@@ -45,81 +44,79 @@ html {
   height: 90px;
   max-width: 1355px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 /* Бургер-иконка */
 .burger-icon {
-    display: none;
-    /* скрываем на десктопе */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
 }
 
 .burger-icon span,
 .burger-icon::before,
 .burger-icon::after {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 3px;
-    border-radius: 15px;
-    background-color: #fff;
-    transition: all 0.5s ease;
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  border-radius: 15px;
+  background-color: #fff;
+  transition: all 0.5s ease;
 }
 
 .burger-icon::before {
-    top: 5px;
+  top: 7px;
 }
 
 .burger-icon::after {
-    bottom: 4px;
+  bottom: 6px;
 }
 
 /* Логотип */
 .logo {
-    height: 77px;
-    width: auto;
-    object-fit: contain;
+  height: 77px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Навигация */
 .nav {
-    align-items: center;
+  align-items: center;
 }
 
 .nav__list {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__item {
-    /* display: flex; */
-    gap: 20px;
+  /* display: flex; */
+  gap: 20px;
 }
 
 .nav__link {
-    color: #fff;
-    font-family: 'NAMU Pro', sans-serif;
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: 500;
-    line-height: 1.4;
-    transition: color 0.5s ease;
-    padding: 8px 12px;
-    border-radius: 4px;
+  color: #fff;
+  font-family: 'NAMU Pro', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: color 0.5s ease;
+  padding: 8px 12px;
+  border-radius: 4px;
 }
 
 .nav__link:hover {
-    color: #C5358C;
+  color: #C5358C;
 }
 
 /* Корзина */
@@ -130,54 +127,94 @@ html {
   width: 36px;
   height: 36px;
   border-radius: 4px;
-  color: #fff; /* ← это currentColor для SVG */
-  transition: all 0.5s ease; /* ← плавность 0.4s */
+  color: #fff;
+  /* ← это currentColor для SVG */
+  transition: all 0.5s ease;
+  /* ← плавность 0.4s */
 }
 
 .shopping-cart:hover {
-  color: #C5358C; /* ← розовый цвет для SVG при ховере */
+  color: #C5358C;
+  /* ← розовый цвет для SVG при ховере */
 }
 
-.hero {
-  width: 100%;
-  background: #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 40px;
-  box-sizing: border-box;
+.main {
+
+}
+
+.main__hero {
+  background-color: #DDDDDD;
+  max-height: 850px;
 }
 
 .hero__content {
-  max-width: 420px;
+  display: flex;
+}
+
+.hero__text {
+  max-width: 556px;
+  margin: 250px 94px 243px 0;
 }
 
 .hero__title {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 15px;
+  font-family: 'NAMU Pro', sans-serif;
+  color: #111;
+  font-size: 46px;
+  line-height: 1.03;
+  margin-bottom: 40px;
 }
 
 .hero__subtitle {
-  color: #555;
-  margin-bottom: 25px;
-  line-height: 1.4;
+  line-height: 1.3;
+  color: #111;
+  font-size: 26px;
+  margin-bottom: 90px;
 }
 
 .hero__button {
-  display: inline-block;
-  background: #d8388e;
-  padding: 12px 22px;
-  border-radius: 4px;
   color: #fff;
-  text-decoration: none;
-  font-size: 15px;
+  line-height: 1.37;
+  background-color: #C5358C;
+  padding: 16px 52px;
+  border-radius: 3px;
+}
+
+.hero__img {
+  width: 733px;
 }
 
 .hero__img img {
   max-width: 733px;
-  height: auto;
-  display: block;
+  width: 100%;
+  height: 805px;
+}
+
+.main__category {
+}
+.container {
+}
+.category__grid {
+  display: grid;
+  grid-template: 50% 50% / 25% 25% 25% 25%;
+  row-gap: 20px;
+  column-gap: 20px;
+  margin: 150px 0;
+}
+.category__item {
+  max-width: 325px;
+  width: 100%;
+  height: 454px;
+  background-color: #fff;
+}
+.category__img img {
+  border-radius: 10px;
+}
+.category__text {
+  font-family: 'NAMU Pro', sans-serif;
+  font-size: 30px;
+}
+.categoty__button {
+  
 }
 
 
@@ -186,12 +223,13 @@ html {
 
 
 
-/* Адаптив */
+
 
 @media (max-width: 768px) {
   .container {
     padding: 0;
   }
+
   /* Уменьшаем высоту хедера */
   .header__inner {
     height: 76px;
@@ -237,6 +275,7 @@ html {
     width: 31px;
     height: 31px;
   }
+
 }
 
 @media (max-width: 390px) {
